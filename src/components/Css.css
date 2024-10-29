@@ -1,0 +1,364 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Flexbox Layout for App */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main {
+    flex: 1;
+}
+
+/* Section Styles */
+section {
+    margin: 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #aaa;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #005ce6 40%, #00b3e6 100%);
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: 0;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    z-index: 1; 
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+.text-container h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.subtitle span {
+    font-weight: bold;
+    color: #ffd700; 
+}
+
+.additional-info {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+.additional-info span {
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        max-width: 90%;
+    }
+  
+    .text-container h1 {
+        font-size: 2em;
+    }
+  
+    .subtitle {
+        font-size: 1em;
+    }
+  
+    .additional-info {
+        font-size: 0.9em;
+    }
+}
+
+/* Skills Section */
+.skills-container {
+    text-align: center;
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background-color: #83b6f1;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    min-height: 50px;
+    min-width: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 150px;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.skill-item:hover {
+    background-color: #d0e6f6;
+    transform: translateY(-3px); 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .skill-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* Project Card Styles */
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.project-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1em;
+    margin-bottom: 12px;
+}
+
+.project-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+    color: #0056b3; 
+}
+
+/* Contact Section */
+.contact {
+    margin: 30px 0;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #007bff; 
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #007bff; 
+}
+
+.contact button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #3a3a3a;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 30px;
+    background-color: #e8f4ff;
+    border-radius: 8px;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #007bff; 
+}
+
+.education {
+    gap: 10px;
+}
+
+.education-item {
+    border: 1px solid black;
+    background-color: #bbb;
+    border-radius: 5px;
+    width: auto;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 30px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Projects Section */
+.projects-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #00ccff;
+    border-radius: 8px;
+}
+
+.projects-container h2 {
+    padding: 10px;
+    color: #fff; 
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Experience Section */
+.experience h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #007bff; 
+}
+
+.experience p {
+    padding: 5px 20px;
+}
+
+.experience-item {
+    padding: 20px;
+    margin: 0 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.experience-item h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.experience-item p {
+    margin: 5px 0;
+    text-align: center;
+}

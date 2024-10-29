@@ -1,0 +1,101 @@
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(125, 238, 125);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000; /* Ensures header is on top of other elements */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Positions items on the left and right */
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+h1 {
+    margin: 0; 
+    font-size: 2rem; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px; /* Space between items */
+}
+
+li {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(156, 156, 156); /* Change color on hover */
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon svg {
+    fill: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
